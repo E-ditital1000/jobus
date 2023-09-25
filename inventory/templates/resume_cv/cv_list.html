@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+
+
+{% block content %}
+<div class="bg-light p-3 border rounded mb-4">
+  <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Template</h3>
+  <ul class="list-unstyled pl-3 mb-0">
+      <li class="mb-2"><strong class="text-black">Published
+      </strong> {{ cv.name}} 
+      </li>
+      <li class="mb-2"><strong class="text-black">Vacancy:</strong> {{ cv.thunbnail }}</li>
+      <li class="mb-2"><strong class="text-black">Employment
+          Status:</strong> {{ q.employment_status }}</li>
+      <li class="mb-2"><strong class="text-black">Experience:</strong> {{ q.experience }}</li>
+      <li class="mb-2"><strong class="text-black">Job Location:</strong> {{ q.job_location }}</li>
+      <li class="mb-2"><strong class="text-black">Salary:</strong> {{ q.Salary }}</li>
+      <li class="mb-2"><strong class="text-black">Gender:</strong> {{ q.gender }}</li>
+      <li class="mb-2"><strong class="text-black">Application
+          Deadline:</strong> {{ q.application_deadline }}</li>
+  </ul>
+</div>
+{% endblock %}

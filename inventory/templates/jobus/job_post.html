@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section class="site-section" id="next-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <h1 class="text-center">POST A JOB</h1>
+                    <form action="" method="POST" class="job-post-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                     
+                        <div class="row form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-md text-white" style="background-color: orange;">
+                                    Post Job
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section id="hero">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %});">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp"style="text-align: center;" >
+            <h2>Welcome to <span>joblinkliberia</span></h2>
+            <p>CONTACT US</p>
+            <div class="text-center"><a href="" class="btn-get-started" style="color:white; color:black; background-color: white;">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %});">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp" style="text-align: center;">
+            <h2>Welcome to <span>joblinkliberia</span></h2>
+            <p>CONTACT US</p>
+            <div class="text-center"><a href="" class="btn-get-started" style="color:white; color:black; background-color: white;">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %});">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp" style="text-align: center;">
+            <h2>Welcome to <span>joblinkliberia</span></h2>
+            <p>CONTACT US</p>
+            <div class="text-center"><a href="" class="btn-get-started" style="color:white; color:black; background-color: white;">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+  </div>
+</section><!-- End Hero -->
+
+
+
+    <section class="site-section" id="next-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <form action="/jobus/contact/" method="POST">
+                        {% csrf_token %}
+
+                        {{ form|crispy }}
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input style="background-color: orange;" type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 ml-auto">
+                    <div class="p-4 mb-3 bg-white">
+                        <p class="mb-0 font-weight-bold">Address</p>
+                        <p class="mb-4">Townhall Community, Gardnersville, Monrovia, Liberia</p>
+
+                        <p class="mb-0 font-weight-bold">Phone</p>
+                        <p class="mb-4"><a href="#">+231 778187295</a></p>
+
+                        <p class="mb-0 font-weight-bold">Email Address</p>
+                        <p class="mb-0"><a href="#">info@joblinkliberia.org</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
