@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+To include instructions and a button for users to go back to the dashboard when they are redirected to the payment_verification_required.html page, you can update the template as follows:
+
+html
+Copy code
+<!-- payment_verification_required.html -->
+<h1>Payment Verification Required</h1>
+<p>You must verify your payment before posting a job.</p>
+
+<!-- Instructions for payment verification -->
+<p>Follow the instructions below to verify your payment:</p>
+<ol>
+    <li>Take a screenshot of your payment receipt.</li>
+    <li>Upload the screenshot using the form below.</li>
+    <li>Once your payment is verified, you can proceed to post a job.</li>
+</ol>
+
+<a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+{% block content %}
+
+
+{% endblock %}
