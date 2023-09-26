@@ -11,4 +11,3 @@ psycopg2==2.8.5
 pytz==2019.3
 whitenoise==5.1.0
 importlab==0.8 
-networkx==3.1
