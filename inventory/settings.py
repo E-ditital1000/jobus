@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobus',
     'dashboard',
-    'resume_cv',
     'crispy_forms',
     'bootstrap4',
     'cloudinary',

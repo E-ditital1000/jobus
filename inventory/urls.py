@@ -9,7 +9,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('jobus/', include('jobus.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('resume_cv/', include("resume_cv.urls")),
+    
 
 ]
 
