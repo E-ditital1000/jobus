@@ -12,7 +12,7 @@ gunicorn==21.2.0
 idna==3.4
 importlab==0.8
 packaging==23.1
-Pillow==10.0.1
+Pillow==6.2.1
 psycopg2==2.9.7
 pytz==2023.3.post1
 requests==2.31.0
