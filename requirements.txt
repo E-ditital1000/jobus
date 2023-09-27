@@ -4,6 +4,7 @@ charset-normalizer==3.2.0
 cloudinary==1.35.0
 dj-database-url==2.1.0
 django==3.1.14
+bootstrap4==0.1.0
 django-bootstrap-form==3.4
 django-cloudinary-storage==0.3.0
 django-crispy-forms==2.0
